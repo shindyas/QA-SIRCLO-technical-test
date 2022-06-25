@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "e72ee699-764d-4fe6-9b5a-44eaf966d4cd",
+		"name": "Technical Test SIRCLO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3323051"
+	},
+	"item": [
+		{
+			"name": "Homepage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview.srcli.xyz/",
+					"protocol": "https",
+					"host": [
+						"qa-interview",
+						"srcli",
+						"xyz"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview.srcli.xyz/login",
+					"protocol": "https",
+					"host": [
+						"qa-interview",
+						"srcli",
+						"xyz"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview.srcli.xyz/login?username=root&password=root123",
+					"protocol": "https",
+					"host": [
+						"qa-interview",
+						"srcli",
+						"xyz"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "root"
+						},
+						{
+							"key": "password",
+							"value": "root123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Gagal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview.srcli.xyz/login?username=eoo&password=rooot",
+					"protocol": "https",
+					"host": [
+						"qa-interview",
+						"srcli",
+						"xyz"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "eoo"
+						},
+						{
+							"key": "password",
+							"value": "rooot"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview.srcli.xyz/data",
+					"protocol": "https",
+					"host": [
+						"qa-interview",
+						"srcli",
+						"xyz"
+					],
+					"path": [
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data Detail Success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview.srcli.xyz/filter?start=2018-07-10&end=2018-05-11",
+					"protocol": "https",
+					"host": [
+						"qa-interview",
+						"srcli",
+						"xyz"
+					],
+					"path": [
+						"filter"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2018-07-10"
+						},
+						{
+							"key": "end",
+							"value": "2018-05-11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data Detail Error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview.srcli.xyz/filter?start=2018-07-10&end=2018-05-11",
+					"protocol": "https",
+					"host": [
+						"qa-interview",
+						"srcli",
+						"xyz"
+					],
+					"path": [
+						"filter"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2018-07-10"
+						},
+						{
+							"key": "end",
+							"value": "2018-05-11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "set-cookie",
+						"value": "username=root",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Timestamp",
+							"value": "2018-07-11",
+							"type": "text"
+						},
+						{
+							"key": "Deskripsi",
+							"value": "Coba1",
+							"type": "default"
+						},
+						{
+							"key": "Jumlah",
+							"value": "12",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://qa-interview.srcli.xyz/data",
+					"protocol": "https",
+					"host": [
+						"qa-interview",
+						"srcli",
+						"xyz"
+					],
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": ":id",
+							"value": "Pemasukan",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview.srcli.xyz/logout",
+					"protocol": "https",
+					"host": [
+						"qa-interview",
+						"srcli",
+						"xyz"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
